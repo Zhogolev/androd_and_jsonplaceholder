@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhogolev.testapplication.UpdatePostActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Name"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_edit_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/comment_edit_title"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/comment_edit_title"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/comment_edit_body"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toStartOf="@+id/comment_edit_body"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/body"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_edit_body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/comment_edit_body"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/comment_edit_body"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="@string/body_tools"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/comment_edit_title"
+        tools:ignore="MissingConstraints,RtlCompat" />
+
+    <Button
+        android:id="@+id/update_button_send"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:onClick="onSendButtonClick"
+        android:text="send new comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_edit_mail"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Email"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_edit_mail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/comment_edit_mail"
+        tools:ignore="RtlCompat"
+        android:layout_marginLeft="8dp" />
+
+    <EditText
+        android:id="@+id/comment_edit_mail"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="@android:string/defaultVoiceMailAlphaTag"
+        android:inputType="textPersonName"
+        android:text="urmail@mail.ru"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/comment_edit_body"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="8dp"
+        tools:ignore="RtlCompat" />
+</android.support.constraint.ConstraintLayout>

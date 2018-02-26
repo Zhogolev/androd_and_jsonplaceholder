@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhogolev.testapplication.PostsActivity">
+
+    <TextView
+        android:id="@+id/comPostBody"
+        android:layout_width="0dp"
+        android:layout_height="139dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/comment_add_button"
+        app:layout_constraintStart_toEndOf="@+id/comment_update_button"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlCompat"
+        tools:text="body from post" />
+
+    <Button
+        android:id="@+id/comment_update_button"
+        android:layout_width="36dp"
+        android:layout_height="111dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onUpdateButtonClick"
+        android:text="update"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/commentsList"
+        app:layout_constraintEnd_toStartOf="@+id/comPostBody"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="OnClick,RtlCompat" />
+
+    <Button
+        android:id="@+id/comment_add_button"
+        android:layout_width="36dp"
+        android:layout_height="111dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onAddCommentButtonClick"
+        android:text="add comment"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/commentsList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/comPostBody"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlCompat" />
+
+    <ListView
+        android:id="@+id/commentsList"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comPostBody"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="RtlCompat"
+        tools:listitem="@layout/comments" />
+</android.support.constraint.ConstraintLayout>

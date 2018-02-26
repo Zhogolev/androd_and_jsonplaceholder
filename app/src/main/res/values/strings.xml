@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">testApplication</string>
+    <string name="add_new_post">Add new post</string>
+    <string name="body">Body</string>
+    <string name="body_tools">body</string>
+    <string name="title">Title</string>
+</resources>
